@@ -8,11 +8,6 @@ const connectDB = require('./db/connect');
 app.use(express.static('./public'));
 app.use(express.json());
 
-app.get('/hello', (req, res) => {
-  res.status(200);
-  res.send('Hello');
-});
-
 app.use('/api/v1/tasks', tasks);
 // app.get('/api/v1/tasks')    // get all tasks
 
